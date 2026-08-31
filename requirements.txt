@@ -1,0 +1,2 @@
+# Install the project and its mandatory dependencies.
+-e .
