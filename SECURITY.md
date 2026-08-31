@@ -9,6 +9,7 @@ binaires malveillants n'est revendiquée.
 expérimentales intactes, ne lire que des fichiers de confiance et mettre à jour
 les dépendances après vérification de reproductibilité.
 
-**À VALIDER** — Après création du dépôt, activer le signalement privé de
-vulnérabilités GitHub et définir le contact de maintenance. Ne pas publier un
-secret, une vulnérabilité exploitable ou un fichier confidentiel dans une issue.
+**CONFIRMÉ** — Le signalement privé de vulnérabilités GitHub est activé.
+Utiliser [le formulaire privé](https://github.com/CHEMIX-Science/casein-ftir/security/advisories/new)
+pour les signalements sensibles. Ne pas publier un secret, une vulnérabilité
+exploitable ou un fichier confidentiel dans une issue publique.
