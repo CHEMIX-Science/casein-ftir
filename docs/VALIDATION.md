@@ -1,19 +1,23 @@
-# Validation de la distribution publique
+# Tests et compatibilité
 
-**CONFIRMÉ** — La suite utilise des données synthétiques. Aucun test ne dépend
-de la référence DFT interne ; un contrôle vérifie explicitement son absence.
-L'import/export du type DFT est testé à l'aide d'un objet synthétique portant
-une métadonnée de test, sans simuler un résultat réel de calcul quantique.
+Les tests vérifient les imports, les prétraitements, les calculs numériques,
+les exports et les commandes sur des jeux synthétiques. Des contrôles dédiés
+vérifient également l'intégrité du CSV DFT fourni, son chargement et le maintien
+des avertissements propres à une référence de fragment.
 
-**CONFIRMÉ** — 201 tests réussis sous Windows/Python 3.12.3 avec lmfit et
-pybaselines le 31 août 2026 (18,82 s). La roue et l’archive source sont construites
-et leur contenu est contrôlé : licence MIT présente, CSV DFT interne absent.
+La configuration GitHub Actions couvre Linux/Python 3.10, Windows/Python 3.12,
+macOS/Python 3.13 et Linux/Python 3.12 avec les moteurs optionnels `lmfit` et
+`pybaselines`. Chaque configuration construit le paquet puis l'installe dans
+un environnement séparé pour exercer les commandes et la référence intégrée.
 
-**CONFIRMÉ** — La configuration GitHub Actions couvre Linux/Python 3.10,
-Windows/Python 3.12, macOS/Python 3.13 et Linux/Python 3.12 avec les moteurs
-optionnels. Les résultats de chaque exécution sont disponibles dans
-[GitHub Actions](https://github.com/CHEMIX-Science/casein-ftir/actions).
+Consultez [les résultats des tests automatiques](https://github.com/CHEMIX-Science/casein-ftir/actions)
+pour la version qui vous intéresse. Pour exécuter la suite localement :
 
-**À VALIDER** — Compatibilité des lecteurs JCAMP/OPUS avec les instruments réels
-et validité analytique sur un jeu de données indépendant.
-Les tests ne prouvent pas la validité analytique sur des mesures expérimentales.
+```bash
+python -m pip install -e ".[test]"
+python -m pytest
+```
+
+Ces tests contrôlent le logiciel, pas la validité d'une méthode analytique sur
+des mesures réelles. Les lecteurs JCAMP/OPUS doivent être vérifiés avec les
+fichiers de votre instrument. Voir [les limites scientifiques](SCIENTIFIC_SCOPE.md).

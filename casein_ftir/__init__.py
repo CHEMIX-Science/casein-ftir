@@ -16,7 +16,7 @@ Modules principaux :
     - report        : export rapports
 """
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 from .io_module import Spectrum, load_spectrum
 from .database import CASEIN_BANDS, AMIDE_I_SUBBANDS, GALALITHE_MARKERS

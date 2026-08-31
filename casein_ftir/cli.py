@@ -259,8 +259,8 @@ def build_parser() -> argparse.ArgumentParser:
                     help="path to a reference spectrum (theoretical or "
                          "commercial) for comparison")
     pa.add_argument("--use-default-galalithe-ref", action="store_true",
-                    help="legacy option: the internal DFT dataset is not distributed; "
-                         "use --reference with your own authorized spectrum")
+                    help="compare with the bundled exploratory galalithe DFT fragment "
+                         "reference (not a certified material standard)")
     pa.add_argument("--no-preprocess-ref", action="store_true",
                     help="skip preprocessing on the reference (use if it "
                          "is already a clean theoretical/normalised spectrum)")

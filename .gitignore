@@ -34,6 +34,3 @@ Thumbs.db
 /*.svg
 /rapport.txt
 /report.txt
-
-# Internal DFT dataset: redistribution requires explicit approval
-/casein_ftir/data/galalithe_dft_reference.csv

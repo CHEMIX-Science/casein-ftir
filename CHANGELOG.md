@@ -1,29 +1,24 @@
-# Historique
+# Historique des versions
+
+## 0.2.1 — 31 août 2026
+
+- Référence théorique DFT Galalithe fournie avec le logiciel sous licence MIT.
+- Chargement direct avec `--use-default-galalithe-ref` ou `get_galalithe_dft_reference()`.
+- Documentation des paramètres de la référence et des limites de son interprétation.
+- Vérification de la référence dans les tests et dans le paquet installé.
+- Présentation française et anglaise recentrée sur les usages, les exemples et les résultats.
 
 ## 0.2.0 — 31 août 2026
 
-**CONFIRMÉ — changements par rapport au dossier interne fourni :**
+Première version publique de Casein FTIR.
 
-- Distribution Python moderne et commande `python -m casein_ftir`.
-- NumPy minimal 2.0, cohérent avec l'usage de `numpy.trapezoid`.
-- Guide français, introduction anglaise, provenance, périmètre scientifique et règles de contribution.
-- Exemples synthétiques régénérables ; résultats expérimentaux et environnements locaux exclus.
-- Validation des entrées numériques, tri de l'axe, refus des doublons, lissage irrégulier refusé et comparaison limitée au domaine commun.
-- Échecs CLI explicites, refus des options incohérentes et des conversions Gaussian sans intensités valides.
-- Échappement HTML des textes et suppression des chemins absolus des exports usuels.
-- Préservation du type synthétique/DFT lors d'un export CSV.
-- Suppression des conclusions de pureté, aptitude à l'usage et confirmation de réticulation dans les rapports.
-- Initialisation des aires lmfit corrigée et solveur least_squares borné à 5 000 évaluations.
-- Graphique : suppression de la double inversion de l’axe partagé et rappel des limites des fractions ajustées.
-- Conservation des principales clés de l’API ; référence numérique interne exclue, avec message explicite des anciens accesseurs et import de références externes maintenu.
+- Import, prétraitement, détection de bandes, aires et ratios.
+- Ajustement gaussien amide I, comparaison de spectres et de références personnalisées.
+- Conversion de sorties Gaussian, exemples synthétiques et rapports texte/HTML.
+- Export des courbes ajustées et graphique de décomposition amide I.
+- Contrôles des données d'entrée, messages d'erreur explicites et comparaison limitée au domaine commun.
+- Installation Python, documentation française et anglaise, licence MIT et tests automatiques.
 
-**CONFIRMÉ** — Licence MIT validée le 31 août 2026 et intégrée à la distribution ;
-attribution collective CHEMIX contributors, sans noms individuels inventés.
-**CONFIRMÉ** — Organisation GitHub CHEMIX-Science créée ; distribution destinée au dépôt `CHEMIX-Science/casein-ftir`.
+## 0.1.0
 
-## 0.1.0 — Version interne fournie
-
-**CONFIRMÉ** — Code et tests présents dans le dossier d'origine ; aucun historique
-Git antérieur importé ni résultat de test historique repris sans vérification.
-
-**CONFIRMÉ** — La publication GitHub exclut le CSV DFT interne et tout historique Git qui le contient. Une autorisation explicite de redistribution sera nécessaire pour l’ajouter.
+Version initiale du programme développé pour le projet Galalithe.

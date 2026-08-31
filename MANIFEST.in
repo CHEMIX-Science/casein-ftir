@@ -13,4 +13,4 @@ global-exclude *.py[cod]
 global-exclude __pycache__
 recursive-include tools *.py
 recursive-include .github *.yml
-exclude casein_ftir/data/galalithe_dft_reference.csv
+include casein_ftir/data/galalithe_dft_reference.csv
